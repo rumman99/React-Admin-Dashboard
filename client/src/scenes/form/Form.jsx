@@ -1,4 +1,4 @@
-import { Box, TextField, useMediaQuery } from '@mui/material';
+import { Box, Button, TextField, useMediaQuery } from '@mui/material';
 import React from 'react';
 import Header from '../../components/header/Header';
 import { Formik } from 'formik';
@@ -16,15 +16,15 @@ const initialValues= {
 const contactRegex= /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/;
 
 const userSchema= yup.object().shape({
-    firstName: yup.string().required('required'),
-    lastName: yup.string().required('required'),
-    email: yup.string().email("Invalid Email").required('required'),
+    firstName: yup.string().required('Required'),
+    lastName: yup.string().required('Required'),
+    email: yup.string().email("Invalid Email").required('Required'),
     contact: yup
         .string()
         .matches(contactRegex, "Phone Number is Not Valid")
-        .required('required'),
-    address1: yup.string().required('required'),
-    address2: yup.string().required('required'),
+        .required('Required'),
+    address1: yup.string().required('Required'),
+    address2: yup.string().required('Required'),
 })
 
 const Form = () => {
@@ -129,6 +129,9 @@ const Form = () => {
                                     helperText={touched.address2 && errors.address2}
                                     sx={{gridColumn:"span 4"}}
                                 />
+                        </Box>
+                        <Box display='flex' justifyContent='end' mt='20px'>
+                            <Button type='submit' color='secondary' variant='contained'>Create New User</Button>
                         </Box>
                     </form>
                 )}

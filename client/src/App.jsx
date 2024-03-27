@@ -10,6 +10,7 @@ import Team from './scenes/team/Team';
 import Contacts from './scenes/contacts/Contacts';
 import Invoices from './scenes/invoices/Invoices';
 import Form from './scenes/form/Form';
+import Calendars from './scenes/calendar/Calendars';
 
 
 function App() {
@@ -34,7 +35,7 @@ function App() {
               <Route path='/line' element=''/>
               <Route path='/faq' element=''/>
               <Route path='/geography' element=''/>
-              <Route path='/calendar' element=''/>
+              <Route path='/calendar' element={<Calendars/>}/>
             </Routes>
           </main>
         </div>
