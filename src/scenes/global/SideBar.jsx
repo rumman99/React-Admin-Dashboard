@@ -92,7 +92,7 @@ const SideBar = () => {
                             width={'100px'} 
                             height={'100px'} 
                             style={{cursor:'pointer', borderRadius:'50%'}} 
-                            src='../../assets/user.png' alt="profile-user" 
+                            src='../../../assets/user.png' alt="profile-user" 
                         />
                     </Box>
 
