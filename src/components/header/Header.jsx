@@ -16,12 +16,14 @@ const Header = ({title, subtitle}) => {
                 sx={{mb:'5px'}}
                 >
                     {title}
-                </Typography>
+            </Typography>
+            
             <Typography
                 variant='h5'
                 color={color.greenAccent[400]}
             >
-                {subtitle}</Typography>
+                {subtitle}
+            </Typography>
         </Box>
     );
 };
